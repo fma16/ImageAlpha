@@ -101,6 +101,8 @@ int main(int argc, char *argv[])
         config.use_environment = 0;
         config.user_site_directory = 0;
         config.site_import = 1;
+        // Runtime caches inside the signed framework invalidate its resource seal.
+        config.write_bytecode = 0;
 
         status = PyConfig_SetBytesString(&config, &config.home, [pythonHome fileSystemRepresentation]);
         if (PyStatus_Exception(status)) {
