@@ -429,16 +429,16 @@
 		7F9C6B2E4C1A4D5B9E4A1C3D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 12;
+			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\n# Build phase signing disabled - using post-archive action instead\n# See sign-for-notarization.sh and the Archive scheme post-action\necho \"Build phase signing skipped - post-archive action will handle signing\"\nexit 0\n";
+			shellScript = "\"$SRCROOT/bundle-pngquant-libs.sh\" \"$TARGET_BUILD_DIR/$WRAPPER_NAME\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
